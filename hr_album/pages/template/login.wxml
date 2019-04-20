@@ -1,0 +1,5 @@
+<template name="login">
+    <view class="login">
+        <button bindgetuserinfo="updateUserInfo" class="loginbtn" openType="getUserInfo">微信登录</button>
+    </view>
+</template>

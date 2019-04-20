@@ -1,0 +1,130 @@
+.pics-box {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25rpx;
+    margin-bottom: 80rpx;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #f2f2f2;
+    z-index: 5;
+    display: flex;
+    overflow: hidden;
+}
+
+.addpic {
+    position: fixed;
+    z-index: 5;
+    width: 120rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    bottom: 150rpx;
+    right: 10rpx;
+    border-radius: 100%;
+    color: #FFF;
+    background-color: #FF4E6E;
+    font-size: 25rpx;
+    text-align: center;
+}
+
+.fBtn {
+    width: 40%;
+    height: 70rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    border: 1px solid #FF4E6E;
+    margin-left: 6%;
+    line-height: 70rpx;
+    font-size: 32rpx;
+    color: #FF4E6E;
+    letter-spacing: 10rpx;
+}
+
+.fBtns {
+    width: 30%;
+    height: 70rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    margin-left: 2%;
+    line-height: 70rpx;
+    font-size: 32rpx;
+    background-color: #FF4E6E;
+    color: #FFF;
+    letter-spacing: 10rpx;
+}
+
+.closeBtn {
+    color: #6B6B6B;
+    border: 1px solid #6B6B6B;
+}
+
+.piclist {
+    position: relative;
+    padding: 10rpx;
+    width: 27%;
+    height: 290rpx;
+    background-color: #FFF;
+    margin-right: 25rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 2px 2px 3px #dddddd;
+}
+
+.delicon {
+    position: absolute;
+    top: -5rpx;
+    right: -5rpx;
+}
+
+.delicon image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.imgitem {
+    width: 100%;
+    height: 240rpx;
+    border-radius: 10rpx;
+}
+
+.pxico {
+    padding-top: 10rpx;
+}
+
+.pxico image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.imgleft {
+    float: left;
+}
+
+.imgright {
+    float: right;
+}
+
+.code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 600px;
+    height: 900px;
+}
+
+.gb {
+    position: fixed;
+    top: 99999rpx;
+    left: 99999rpx;
+    width: 700px;
+    height: 1050rpx;
+}

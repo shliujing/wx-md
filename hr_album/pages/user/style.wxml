@@ -1,0 +1,15 @@
+<view class="header">
+    <view bindtap="switchNav" class="headbox {{cid==0?'active':''}}" data-cid="0">热门</view>
+    <view bindtap="switchNav" class="headbox {{cid==item.id?'active':''}}" data-cid="{{item.id}}" wx:for="{{cate}}" wx:key="unique">{{item.title}}</view>
+</view>
+<view class="sbox">
+    <view bindtap="updateSkin" class="items" data-id="{{item.id}}" data-skiname="{{item.skiname}}" wx:for="{{skinData}}" wx:key="unique">
+        <image class="pic" src="{{surl}}skin/{{item.skiname}}/{{item.skiname}}.jpg"></image>
+        <view class="title">{{item.skintitle}}</view>
+    </view>
+</view>
+<view class="foot">
+    <view bindtap="closeWin" class="closeBtn">
+关闭
+</view>
+</view>

@@ -1,0 +1,24 @@
+<view class="desc">写标题</view>
+<view class="titbox">
+    <textarea bindinput="uptitle" class="titletxt" value="{{photoData.title}}"></textarea>
+</view>
+<view class="desc">给图片写文字</view>
+<view class="list">
+    <view class="item" wx:for="{{photoData.pic}}" wx:key="unique">
+        <view class="thumb">
+            <image src="{{imgurl}}{{item}}"></image>
+        </view>
+        <view class="text">
+            <input bindblur="uptext" class="picTxt" data-idx="{{index}}" maxlength="16" placeholder="点击这里添加文字（限16字）" value="{{photoData.text[index]}}"></input>
+            <view class="dopic">
+                <image bindtap="topmove" data-idx="{{index}}" src="../../resource/images/top.png"></image>
+                <image bindtap="botmove" data-idx="{{index}}" src="../../resource/images/bottom.png"></image>
+                <image bindtap="delpic" data-idx="{{index}}" src="../../resource/images/delete.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="tfooter">
+    <view bindtap="closeWin" class="tfBtn">关闭</view>
+    <view bindtap="savetext" class="tfBtn tcloseBtn">完成</view>
+</view>

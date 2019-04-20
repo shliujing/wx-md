@@ -1,0 +1,89 @@
+page {
+    background-color: #FFF;
+}
+
+.pagebox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gb {
+    position: fixed;
+    top: 99999rpx;
+    left: 99999rpx;
+    width: 700px;
+    height: 1050rpx;
+}
+
+.code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 600px;
+    height: 900px;
+}
+
+.stext {
+    margin-top: 50rpx;
+    font-size: 35rpx;
+    letter-spacing: 5rpx;
+}
+
+.sdesc {
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+
+.addbox {
+    background-color: #FAFAFC;
+    width: 700rpx;
+    height: 200rpx;
+    margin-top: 30rpx;
+    border-radius: 10rpx;
+    border: 1px solid #E9EAEF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iocbox {
+    width: 40rpx;
+    height: 40rpx;
+    background-color: #FD5A87;
+    border-radius: 100%;
+    padding: 30rpx;
+    margin: 30rpx 30rpx 15rpx 30rpx;
+}
+
+.descss {
+    font-size: 28rpx;
+    letter-spacing: 5rpx;
+}
+
+.imgs {
+    width: 100%;
+    height: 100%;
+}
+
+.rest-container {
+    margin-top: 20rpx;
+    width: 95%;
+    height: 100rpx;
+    background-image: linear-gradient(-180deg,#FAFAFC 0%,#FFFFFF 100%);
+    border-radius: 12px 12px 0 0;
+    border-top: 1rpx solid #E0E2E9;
+}
+
+.llads {
+    position: fixed;
+    bottom: 200rpx;
+    width: 95%;
+    height: 220rpx;
+    overflow: hidden;
+    left: 20rpx;
+}

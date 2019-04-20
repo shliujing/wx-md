@@ -1,0 +1,8 @@
+<template name="loading">
+    <view class="loading-mask" wx:if="{{loading}}">
+        <view class="loading text-center">
+            <image src="../../resource/images/loading-black.svg"></image>
+            <view class="ltext">{{text}}</view>
+        </view>
+    </view>
+</template>

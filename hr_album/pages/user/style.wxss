@@ -1,0 +1,90 @@
+page {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    background-color: #FFF;
+    font-size: 28rpx;
+}
+
+.headbox {
+    width: 20%;
+    color: #4D4D4D;
+    text-align: center;
+    line-height: 80rpx;
+    letter-spacing: 10rpx;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.active {
+    color: #FF4E6E;
+    border-bottom: 1px solid #FF4E6E;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #f2f2f2;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.closeBtn {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFF;
+    height: 70rpx;
+    border-radius: 2rpx;
+    border: 1px solid #EDEDED;
+    line-height: 70rpx;
+    font-size: 35rpx;
+    color: #4D4D4D;
+    letter-spacing: 20rpx;
+}
+
+.sbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 100rpx 10rpx 120rpx 10rpx;
+    overflow: hidden;
+}
+
+.items {
+    display: block;
+    width: 25%;
+    height: 230rpx;
+    background-color: #FFF;
+    padding: 20rpx;
+    box-shadow: 2px 2px 3px #dddddd;
+    margin-left: 15rpx;
+    margin-bottom: 15rpx;
+}
+
+.items .pic {
+    display: -webkit-box;
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.items .title {
+    margin-top: 20rpx;
+    display: block;
+    width: 100%;
+    text-align: center;
+}

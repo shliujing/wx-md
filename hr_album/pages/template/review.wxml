@@ -1,0 +1,12 @@
+<template name="review">
+    <view class="container">
+        <view class="item1_cn">
+            <view bindtap="tap_item" data-id="{{index}}" wx:for="{{aclist}}" wx:key="{{index}}">
+                <view class="inner_item">
+                    <image class="item1_image" src="{{item.thumb}}"></image>
+                    <text class="item1_text">{{item.title}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

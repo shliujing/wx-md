@@ -1,0 +1,24 @@
+<import src="/hr_album/pages/template/loading.wxml"></import>
+<view class="pics-box">
+    <view class="gb">
+        <canvas canvasId="myCanvas" class="code"></canvas>
+    </view>
+    <view class="piclist" wx:for="{{photoData.pic}}" wx:key="unique">
+        <view bindtap="delpic" class="delicon" data-idx="{{index}}">
+            <image src="../../resource/images/delpic.png"></image>
+        </view>
+        <view class="fz">
+            <image class="imgitem" src="{{imgurl}}{{item}}"></image>
+        </view>
+        <view class="pxico">
+            <image bindtap="leftmove" class="imgleft" data-idx="{{index}}" src="../../resource/images/left.png"></image>
+            <image bindtap="rightmove" class="imgright" data-idx="{{index}}" src="../../resource/images/right.png"></image>
+        </view>
+    </view>
+</view>
+<view bindtap="addpic" class="addpic">新增图片</view>
+<view class="footer">
+    <view bindtap="closeWin" class="fBtn closeBtn">关闭</view>
+    <view bindtap="savepic" class="fBtn">保存</view>
+</view>
+<template is="loading" data="{{loading:loading,text:text}}"></template>

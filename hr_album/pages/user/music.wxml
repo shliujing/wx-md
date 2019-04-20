@@ -1,0 +1,32 @@
+<block wx:if="{{!seachmusic}}">
+    <view class="header">
+        <view bindtap="onseach" class="seach">搜索</view>
+        <view class="navs">
+            <view bindtap="switchNav" class="nav-items {{cid==0?'active':''}}" data-cid="0">热门</view>
+            <view bindtap="switchNav" class="nav-items  {{cid==item.id?'active':''}}" data-cid="{{item.id}}" wx:for="{{cate}}" wx:key="unique">{{item.title}}</view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="mitem" wx:for="{{music}}" wx:key="unique">
+            <view bindtap="changeMusic" class="mtitle" data-mid="{{item.id}}" data-music="{{item.music}}">{{item.singer}} - {{item.title}}</view>
+            <view bindtap="saveMusic" class="oksure {{mid==item.id?'okdone':''}}" data-music="{{item.music}}">确定</view>
+        </view>
+    </view>
+</block>
+<view class="seachmusic" wx:if="{{seachmusic}}">
+    <view class="seachdone">
+        <input bindinput="bindKeyInput" class="seachs" focus="true" placeholder="搜索"></input>
+        <view bindtap="exitSeach" class="cancel">取消</view>
+    </view>
+    <view class="lists">
+        <view class="mitem" wx:for="{{smudata}}" wx:key="unique">
+            <view bindtap="changeMusic" class="mtitle" data-mid="{{item.id}}" data-music="{{item.music}}">{{item.singer}} - {{item.title}}</view>
+            <view bindtap="saveMusic" class="oksure {{mid==item.id?'okdone':''}}" data-music="{{item.music}}">确定</view>
+        </view>
+    </view>
+</view>
+<view class="foot">
+    <view bindtap="closeWin" class="closeBtn">
+关闭
+</view>
+</view>

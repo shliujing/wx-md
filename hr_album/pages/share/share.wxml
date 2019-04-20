@@ -1,0 +1,27 @@
+<view class="pagebox">
+    <view class="gb">
+        <canvas canvasId="myCanvas" class="code"></canvas>
+    </view>
+    <image class="sharelog" src="../../resource/images/sharelog.png"></image>
+    <view class="buttons">
+        <button class="weixin" openType="share">
+            <image class="weixin_ico" src="../../resource/images/icon_weixin.png"></image>
+            <text class="text1">微信好友</text>
+        </button>
+        <button bindtap="haibao" class="weixin">
+            <image class="weixin_ico" src="../../resource/images/icon_pyq.png"></image>
+            <text class="text1">生成个性海报</text>
+        </button>
+    </view>
+    <block wx:if="{{shared}}">
+        <view class="mask"></view>
+        <view class="hbbox">
+            <image class="hbimg" src="{{shareImgSrc}}"></image>
+        </view>
+        <text class="t1">海报已保存到您的系统相册</text>
+        <view bindtap="closered" class="h_btn">我知道了</view>
+    </block>
+</view>
+<view class="llads">
+    <ad unitId="{{llads}}" wx:if="{{llads}}"></ad>
+</view>

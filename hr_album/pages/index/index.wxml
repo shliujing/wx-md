@@ -1,0 +1,103 @@
+<block wx:if="{{review==1}}">
+    <import src="/hr_album/pages/template/relist.wxml"></import>
+    <template is="relist" data="{{relist:relist}}"></template>
+</block>
+<block wx:if="{{review==2}}">
+    <import src="/hr_album/pages/template/review.wxml"></import>
+    <template is="review" data="{{aclist:aclist}}"></template>
+</block>
+<block wx:if="{{review==0&&showmode==0}}">
+    <view class="pagebox">
+        <scroll-view bindscrolltolower="scrolltolower" lowerThreshold="20" scrollTop="{{scrollTop}}" scrollWithAnimation="true" scrollY="true" style="height:{{screenHeight}}px;">
+            <swiper autoplay="{{autoplay}}" class="swiper" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" wx:if="{{ads.length>0}}">
+                <swiper-item wx:for="{{ads}}" wx:key="unique">
+                    <image catchtap="hdGoto" class="slide-image" data-id="{{index}}" mode="aspectFill" src="{{imgurl}}{{item.thumb}}" wx:if="{{item.type==1}}"></image>
+                    <navigator appId="{{item.appid}}" class="apptiao" path="{{item.path}}" target="miniProgram" wx:else>
+                        <image class="slide-image" mode="widthFill" src="{{imgurl}}{{item.thumb}}"></image>
+                    </navigator>
+                </swiper-item>
+            </swiper>
+            <ad style="margin-bottom:20rpx;" unitId="{{llads}}" wx:if="{{llads}}"></ad>
+            <button catchtap="showAlbum" class="{{list_style==1?'listbox':'listbox1'}}" data-id="{{items.id}}" data-skin="{{items.skin}}" style="margin-top:20rpx;" wx:for="{{hotlist}}" wx:for-item="items" wx:key="unique">
+                <text class="title" wx:if="{{list_style==1}}">{{items.title}}</text>
+                <image class="bgimg" model="aspectFill" src="{{imgurl}}{{items.thumb}}"></image>
+                <text class="title" wx:if="{{list_style==2}}">{{items.title}}</text>
+                <image class="avatar" src="{{items.avatar}}"></image>
+                <text class="nickname" wx:if="{{list_style==1}}">{{items.nickname}}</text>
+                <view class="tj">
+                    <image class="tjimg" src="/hr_album/resource/images/ln.png"></image>
+                    <text class="tjsum" wx:if="{{items.click>0}}">{{items.click>100000?'100000+':items.click}}</text>
+                    <image class="tjimg" src="/hr_album/resource/images/shares.png" wx:if="{{items.share>0}}"></image>
+                    <text class="tjsum" wx:if="{{items.share>0}}">{{items.share>100000?'100000+':items.share}}</text>
+                </view>
+            </button>
+        </scroll-view>
+    </view>
+    <button class="kfbtn" openType="contact" wx:if="{{iskf>0}}">
+        <image class="kfimg" src="{{imgurl}}{{kfbg}}" wx:if="{{kfbg}}"></image>
+        <image class="kfimg" src="/hr_album/resource/images/kfbtn.png" wx:else></image>
+    </button>
+    <view class="navigator">
+        <view catchtap="gotoNav" class="navbox" data-nav="index">
+            <image class="navico" src="/hr_album/resource/images/faxian_selected.png"></image>
+            <text class="nav_t2">首页</text>
+        </view>
+        <view catchtap="gotoNav" class="navbox" data-nav="add">
+            <view class="editbox">
+                <image class="navicos" src="/hr_album/resource/images/release.png"></image>
+            </view>
+            <text class="nav_t1">{{todo}}</text>
+        </view>
+        <view catchtap="gotoNav" class="navbox" data-nav="user">
+            <image class="navico" src="/hr_album/resource/images/my.png"></image>
+            <text>我的</text>
+        </view>
+    </view>
+</block>
+<block wx:if="{{review==0&&showmode>0}}">
+    <import src="/hr_album/pages/template/loading.wxml"></import>
+    <import src="/hr_album/pages/template/login.wxml"></import>
+    <template is="loading" data="{{loading:loading,text:text}}"></template>
+    <template is="login" data wx:if="{{login}}"></template>
+    <view class="pagebox" wx:if="{{!login}}">
+        <swiper autoplay="{{autoplay}}" class="swipers" duration="{{duration}}" indicatorDots="{{indicatorDot}}" interval="{{interval}}" wx:if="{{ads.length>0}}">
+            <swiper-item wx:for="{{ads}}" wx:key="unique">
+                <image catchtap="hdGoto" class="slide-image" data-id="{{index}}" mode="aspectFill" src="{{imgurl}}{{item.thumb}}" wx:if="{{item.type==1}}"></image>
+                <navigator appId="{{item.appid}}" class="apptiao" path="{{item.path}}" target="miniProgram" wx:else>
+                    <image class="slide-image" mode="widthFill" src="{{imgurl}}{{item.thumb}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+        <image class="maskswiper" src="/hr_album/resource/images/banner-bottom.png"></image>
+        <view class="whitebg"></view>
+        <ad style="margin-bottom:20rpx;background-color:#FFF;" unitId="{{llads}}" wx:if="{{llads}}"></ad>
+        <view class="viewboxes" wx:for="{{moblist}}" wx:for-item="items" wx:key="index">
+            <view class="mobtitle">
+                <view class="boxcolor"></view>
+                <text>{{items.title}}</text>
+            </view>
+            <view class="mobboxes">
+                <view catchtap="chooseimg" class="moblist" data-skinid="{{item.skin}}" wx:for="{{items.data}}" wx:key="index">
+                    <image class="mimgbox" src="{{item.thumb}}"></image>
+                    <view class="smtitle">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="navigator">
+            <view catchtap="gotoNav" class="navbox" data-nav="index">
+                <image class="navico" src="/hr_album/resource/images/faxian_selected.png"></image>
+                <text class="nav_t2">首页</text>
+            </view>
+            <view catchtap="gotoNav" class="navbox" data-nav="add">
+                <view class="editbox">
+                    <image class="navicos" src="/hr_album/resource/images/release.png"></image>
+                </view>
+                <text class="nav_t1">{{todo}}</text>
+            </view>
+            <view catchtap="gotoNav" class="navbox" data-nav="user">
+                <image class="navico" src="/hr_album/resource/images/my.png"></image>
+                <text>我的</text>
+            </view>
+        </view>
+    </view>
+</block>

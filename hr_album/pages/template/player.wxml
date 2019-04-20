@@ -1,0 +1,5 @@
+<template name="player">
+    <view bindtap="playmusiced" class="bgmusic" style="{{animas}}">
+        <image class="img" src="../../resource/images/music_note_big.png"></image>
+    </view>
+</template>

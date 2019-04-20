@@ -1,0 +1,95 @@
+<import src="/hr_album/pages/template/login.wxml"></import>
+<template is="login" data wx:if="{{login}}"></template>
+<block wx:if="{{!login}}">
+    <view class="container">
+        <view class="header" style="background-color: #FD5A87;">
+            <image bindtap="systems" class="system_tools" src="../../resource/images/sys.png"></image>
+            <view class="box">
+                <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+                <text class="nickname">{{userInfo.nickName}}</text>
+                <view class="pay" wx:if="{{config.ispay>0}}">
+                    <text>余额:</text>
+                    <text style="color:#FD5A87;font-size:32rpx;margin-left:5rpx;margin-right:5rpx;">{{fee}}</text>
+                    <text style="margin-left:5rpx;">元</text>
+                </view>
+                <form bindsubmit="goto_fromid" reportSubmit="true" wx:if="{{config.ispay>0}}">
+                    <button class="mtbtns" formType="submit">余额提现</button>
+                </form>
+                <view class="u_list">
+                    <view class="u_items">
+                        <image class="u_icos" src="../../resource/images/album.png"></image>
+                        <text class="u_text1">相册</text>
+                        <text class="u_text2">{{plist.length}}</text>
+                    </view>
+                    <view class="u_after"></view>
+                    <view class="u_items">
+                        <image class="u_icos" src="../../resource/images/xin.png"></image>
+                        <text class="u_text1">分享</text>
+                        <text class="u_text2">{{plist[0].allshare>999?'999+':plist[0].allshare}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <button class="kfbtn" openType="contact" style="{{config.mapp>0?'':'bottom:150rpx;'}}" wx:if="{{config.iskf>0}}">
+            <image class="kfimg" src="{{config.imgurl}}{{config.kfbg}}" wx:if="{{config.kfbg}}"></image>
+            <image class="kfimg" src="/hr_album/resource/images/kfbtn.png" wx:else></image>
+        </button>
+        <form bindsubmit="goto_app" reportSubmit="true" wx:if="{{config.mapp>0}}">
+            <button class="more_btn" formType="submit">
+                <image class="m_image" src="{{config.imgurl}}{{config.morebg}}" wx:if="{{config.morebg}}"></image>
+                <image class="m_image" src="../../resource/images/more.png" wx:else></image>
+            </button>
+        </form>
+        <view class="cards">
+            <block wx:for="{{plist}}" wx:for-item="items" wx:key="index">
+                <view class="llads" wx:if="{{config.llads&&index==0}}">
+                    <ad unitId="{{config.llads}}"></ad>
+                </view>
+                <form bindsubmit="upform" reportSubmit="true">
+                    <view class="al_box">
+                        <image catchtap="showcard" class="al_img" data-id="{{items.id}}" src="{{items.thumb}}"></image>
+                        <view class="al_info">
+                            <text catchtap="showcard" class="al_title" data-id="{{items.id}}">{{items.title}}</text>
+                            <view catchtap="showcard" class="al_addtime" data-id="{{items.id}}">
+                                <image class="u_tico" src="../../resource/images/times.png"></image>
+                                <text class="al_times">{{items.addtime}}</text>
+                            </view>
+                            <view catchtap="showcard" class="al_desc" data-id="{{items.id}}">
+                                <view class="al_widths">
+                                    <image class="u_dico" src="../../resource/images/visit.png"></image>
+                                    <text class="u_dtext">{{items.click>999?'999+':items.click}}</text>
+                                </view>
+                                <view class="al_widths">
+                                    <image class="u_dico" src="../../resource/images/sharess.png"></image>
+                                    <text class="u_dtext">{{items.share>999?'999+':items.share}}</text>
+                                </view>
+                            </view>
+                            <view class="al_btns">
+                                <button catchtap="subClick" class="al_btn edit" data-id="{{items.id}}" formType="submit">{{config.edit}}</button>
+                                <button catchtap="showcard" class="al_btn del" data-id="{{items.id}}" formType="submit">查看</button>
+                                <button catchtap="gotoshare" class="al_btn shares" data-id="{{items.id}}" data-thumb="{{items.thumb}}" data-title="{{items.title}}" formType="submit">分享</button>
+                            </view>
+                            <image catchtap="delClick" class="user_del" data-id="{{items.id}}" src="../../resource/images/del@user.png"></image>
+                        </view>
+                    </view>
+                </form>
+            </block>
+        </view>
+    </view>
+    <view class="navigator">
+        <view catchtap="gotoNav" class="navbox" data-nav="index">
+            <image class="navico" src="/hr_album/resource/images/faxian.png"></image>
+            <text>首页</text>
+        </view>
+        <view catchtap="gotoNav" class="navbox" data-nav="add">
+            <view class="editbox">
+                <image class="navicos" src="/hr_album/resource/images/release.png"></image>
+            </view>
+            <text class="nav_t1">{{config.todo}}</text>
+        </view>
+        <view catchtap="gotoNav" class="navbox" data-nav="user">
+            <image class="navico" src="/hr_album/resource/images/my_on.png"></image>
+            <text class="nav_t2">我的</text>
+        </view>
+    </view>
+</block>

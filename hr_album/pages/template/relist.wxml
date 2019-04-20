@@ -1,0 +1,8 @@
+<template name="relist">
+    <view class="rebox">
+        <view class="rimgsbox" wx:for="{{relist}}" wx:for-item="items" wx:key="unique">
+            <image bindtap="imgview" class="rbox" data-img="{{items.content}}" src="{{items.content}}"></image>
+            <text class="pictext">{{items.title}}</text>
+        </view>
+    </view>
+</template>

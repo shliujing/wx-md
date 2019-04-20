@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "hr_album/pages/index/index",
+    "hr_album/pages/user/user",
+    "hr_album/pages/user/style",
+    "hr_album/pages/user/save",
+    "hr_album/pages/user/pics",
+    "hr_album/pages/user/music",
+    "hr_album/pages/user/text",
+    "hr_album/pages/user/add",
+    "hr_album/pages/user/cash",
+    "hr_album/pages/pay/pay",
+    "hr_album/pages/show/show",
+    "hr_album/pages/share/share",
+    "hr_album/pages/user/app",
+    "hr_album/pages/user/tlist",
+    "hr_album/pages/user/details",
+    "hr_album/pages/web/index",
+    "hr_album/pages/review/review",
+    "hr_album/pages/zhufu/zhufu"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#373A41",
+    "backgroundColor": "#f2f2f2"
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

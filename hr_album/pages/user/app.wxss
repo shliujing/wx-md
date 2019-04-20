@@ -1,0 +1,47 @@
+.pagebox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40rpx;
+}
+
+.app_box {
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+    background-color: #FFF;
+    border: 1px solid #9d9d9d;
+    box-shadow: 8rpx 8rpx 0rpx #ccc;
+    margin-bottom: 20rpx;
+}
+
+.app_desc {
+    width: 490rpx;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    overflow: hidden;
+}
+
+.app_title {
+    height: 50rpx;
+    letter-spacing: 2rpx;
+    font-size: 38rpx;
+}
+
+.app_text {
+    font-size: 28rpx;
+    color: #9d9d9d;
+}
+
+.app_thumb {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.app_jt {
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 35rpx;
+}

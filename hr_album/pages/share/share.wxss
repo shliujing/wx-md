@@ -1,0 +1,152 @@
+.pagebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sharelog {
+    margin-top: 150rpx;
+    width: 250rpx;
+    height: 258rpx;
+}
+
+.share_text {
+    font-size: 32rpx;
+    color: #000;
+    letter-spacing: 5rpx;
+    margin-top: 100rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150rpx;
+}
+
+button {
+    content: "";
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    background: none;
+    overflow: visible;
+    box-sizing: inherit;
+    border-radius: 0;
+}
+
+button::after {
+    border: none;
+}
+
+.weixin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300rpx;
+    height: 200rpx;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.weixin_ico {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.text1 {
+    margin-top: 25rpx;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 540px;
+    height: 550px;
+}
+
+.gb {
+    position: fixed;
+    top: 99999rpx;
+    left: 99999rpx;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
+}
+
+.hbbox {
+    background-color: #FFF;
+    width: 500rpx;
+    height: 700rpx;
+    position: absolute;
+    top: 100rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    left: 130rpx;
+    z-index: 10005;
+}
+
+.t1 {
+    color: #FFF;
+    font-size: 32rpx;
+    z-index: 5;
+    position: absolute;
+    top: 820rpx;
+    left: 120rpx;
+    z-index: 1003;
+}
+
+.t2 {
+    color: #FFF;
+    font-size: 32rpx;
+    z-index: 5;
+    position: absolute;
+    top: 860rpx;
+    left: 120rpx;
+    z-index: 1003;
+}
+
+.h_btn {
+    position: absolute;
+    bottom: 180rpx;
+    width: 300rpx;
+    height: 80rpx;
+    left: 250rpx;
+    background-color: #D64B28;
+    color: #FFF;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 80rpx;
+    z-index: 1003;
+}
+
+.hbimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.llads {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    min-height: 220rpx;
+    overflow: hidden;
+    left: 0rpx;
+    z-index: 5;
+}

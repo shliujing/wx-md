@@ -1,0 +1,30 @@
+<view class="cons">
+    <view class="gb">
+        <canvas canvasId="myCanvas" class="code"></canvas>
+    </view>
+    <view bindtap="comeback" class="picbox">
+        <image class="picdemo" src="{{thumb}}"></image>
+        <image class="playicon" src="../../resource/images/play.png"></image>
+    </view>
+    <button class="sbtn" openType="share"> 
+发送给好友
+</button>
+    <button bindtap="haibao" class="pybtn"> 
+生成海报
+</button>
+</view>
+<view class="switchbox">
+    <text class="s_desc">允许系统推荐此相册到首页</text>
+    <switch bindchange="switch1Change" checked="{{check>0?'checked':''}}" class="switchs" color="#FF4E6E"></switch>
+</view>
+<view class="sfooter">
+    <ad unitId="{{llads}}" wx:if="{{llads}}"></ad>
+</view>
+<block wx:if="{{shared}}">
+    <view class="mask"></view>
+    <view class="hbbox">
+        <image class="hbimg" src="{{shareImgSrc}}"></image>
+    </view>
+    <text class="t1">海报已保存到您的系统相册</text>
+    <view bindtap="closered" class="h_btn">我知道了</view>
+</block>

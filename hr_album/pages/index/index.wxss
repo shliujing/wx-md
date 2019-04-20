@@ -1,0 +1,297 @@
+.pagebox {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 120rpx;
+}
+
+.apptiao {
+    width: 100%;
+    height: 100%;
+}
+
+.maskswiper {
+    position: absolute;
+    z-index: 5;
+    top: 273rpx;
+    left: 0;
+    height: 30rpx;
+    width: 100%;
+}
+
+.whitebg {
+    background-color: #FFF;
+    width: 100%;
+    height: 30rpx;
+}
+
+.listbox1 {
+    position: relative;
+    height: 550rpx;
+    width: 350rpx;
+    background-color: #FFF;
+    margin-bottom: 20rpx;
+    margin-left: 20rpx;
+    float: left;
+    box-shadow: 0 10rpx 20rpx rgba(0,0,0,0.1);
+}
+
+.listbox1 .bgimg {
+    width: 95%;
+    padding-top: 10rpx;
+    height: 400rpx;
+}
+
+.listbox1 .avatar {
+    position: absolute;
+    bottom: 10rpx;
+    left: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
+    border: 4rpx solid #FFF;
+    border-radius: 100%;
+}
+
+.listbox1 .nickname {
+    position: absolute;
+    bottom: 10rpx;
+    left: 110rpx;
+    font-size: 26rpx;
+    color: #9a9a9a;
+    max-width: 40%;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+}
+
+.listbox1 .title {
+    display: block;
+    font-size: 32rpx;
+    padding-left: 20rpx;
+    color: #0e0e0e;
+    width: 330rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.listbox1 .tj {
+    position: absolute;
+    display: flex;
+    text-align: right;
+    height: 50rpx;
+    bottom: 5rpx;
+    right: 10rpx;
+    line-height: 50rpx;
+}
+
+.listbox1 .tjimg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 5rpx;
+}
+
+.listbox1 .tjsum {
+    font-size: 25rpx;
+    color: #9a9a9a;
+    max-width: 100rpx;
+    height: 60rpx;
+    line-height: 40rpx;
+    text-align: left;
+    margin-right: 10rpx;
+}
+
+.listbox {
+    position: relative;
+    height: 480rpx;
+    width: 95%;
+    background-color: #FFF;
+    border-radius: 10rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+}
+
+.listbox .bgimg {
+    width: 100%;
+    height: 400rpx;
+}
+
+.listbox .avatar {
+    position: absolute;
+    bottom: 10rpx;
+    left: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
+    border: 4rpx solid #FFF;
+    border-radius: 100%;
+}
+
+.listbox .nickname {
+    position: absolute;
+    bottom: 10rpx;
+    left: 110rpx;
+    font-size: 26rpx;
+    color: #9a9a9a;
+    max-width: 40%;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+}
+
+.listbox .title {
+    position: absolute;
+    width: 98%;
+    bottom: 80rpx;
+    font-size: 40rpx;
+    line-height: 50rpx;
+    text-align: left;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10rpx;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.listbox .tj {
+    position: absolute;
+    display: flex;
+    text-align: right;
+    height: 50rpx;
+    bottom: 5rpx;
+    right: 10rpx;
+    line-height: 50rpx;
+}
+
+.listbox .tjimg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 5rpx;
+}
+
+.listbox .tjsum {
+    font-size: 25rpx;
+    color: #9a9a9a;
+    max-width: 100rpx;
+    height: 60rpx;
+    line-height: 40rpx;
+    text-align: left;
+    margin-right: 10rpx;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.swipers {
+    width: 100%;
+    height: 300rpx;
+}
+
+.swiper {
+    width: 100%;
+    height: 250rpx;
+    margin-bottom: 30rpx;
+}
+
+.code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 600px;
+    height: 900px;
+}
+
+.gb {
+    position: fixed;
+    top: 99999rpx;
+    left: 99999rpx;
+    width: 700px;
+    height: 1050rpx;
+}
+
+button {
+    content: "";
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    background: none;
+    overflow: visible;
+    box-sizing: inherit;
+    border-radius: 0;
+}
+
+button::after {
+    border: none;
+}
+
+.kfbtn {
+    position: fixed;
+    bottom: 120rpx;
+    width: 100rpx;
+    height: 100rpx;
+    right: 10rpx;
+}
+
+.kfimg {
+    width: 100%;
+    height: 100%;
+}
+
+.viewboxes {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+}
+
+.mobtitle {
+    display: flex;
+    flex-direction: row;
+    font-size: 35rpx;
+    font-weight: bold;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: left;
+    margin-left: 20rpx;
+    margin-bottom: 30rpx;
+    margin-top: 20rpx;
+}
+
+.boxcolor {
+    margin-top: 5rpx;
+    width: 10rpx;
+    height: 40rpx;
+    margin-right: 15rpx;
+    background-color: #ff4e6e;
+}
+
+.mobboxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.moblist {
+    display: flex;
+    flex-direction: column;
+    width: 320rpx;
+    overflow: hidden;
+    height: 250rpx;
+    margin-left: 40rpx;
+}
+
+.mimgbox {
+    width: 300rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+
+.smtitle {
+    font-size: 30rpx;
+    height: 50rpx;
+    margin-top: 10rpx;
+}

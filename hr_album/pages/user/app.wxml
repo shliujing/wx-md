@@ -1,0 +1,10 @@
+<view class="pagebox">
+    <navigator appId="{{items.appid}}" class="app_box" path="{{items.path}}" target="miniProgram" wx:for="{{list}}" wx:for-item="items" wx:key="unique">
+        <image class="app_thumb" src="{{config.imgurl}}{{items.thumb}}"></image>
+        <view class="app_desc">
+            <text class="app_title">{{items.title}}</text>
+            <text class="app_text">{{items.desc}}</text>
+        </view>
+        <image class="app_jt" src="../../resource/images/jt.png"></image>
+    </navigator>
+</view>

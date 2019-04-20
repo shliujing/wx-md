@@ -1,0 +1,27 @@
+<import src="/hr_album/pages/template/login.wxml"></import>
+<template is="login" data wx:if="{{login}}"></template>
+<block wx:if="{{!login}}">
+    <scroll-view bindscrolltolower="scrolltolower" class="pagebox" lowerThreshold="20" scrollTop="{{scrollTop}}" scrollWithAnimation="true" scrollY="true" style="height:{{screenHeight}}px;">
+        <view class="box" wx:for="{{rlist}}" wx:for-item="items" wx:key="unique">
+            <view class="imgbox">
+                <image class="avatar" src="{{items.avatar}}"></image>
+            </view>
+            <view class="boxes">
+                <view class="nickname">{{items.nickname}} </view>
+                <view class="times">{{items.addtime}}</view>
+                <view class="content">{{items.content}}</view>
+            </view>
+            <view bindtap="delreview" class="delbox" data-id="{{items.id}}" data-index="{{index}}" wx:if="{{isme}}">删除</view>
+        </view>
+    </scroll-view>
+    <view class="rbox">
+        <view class="img">
+            <image class="userimg" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+            <input bindinput="keyinput" class="inputbox" confirmType="发送" placeholder="说点什么..." value="{{content}}"></input>
+        </view>
+        <view class="gang"></view>
+        <view bindtap="doreview" class="doreview">发送</view>
+    </view>
+</block>

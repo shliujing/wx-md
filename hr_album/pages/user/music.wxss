@@ -1,0 +1,190 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    background-color: #f2f2f2;
+    z-index: 5;
+}
+
+.seach {
+    width: 90%;
+    background-color: #fff;
+    height: 65rpx;
+    line-height: 65rpx;
+    border-radius: 5rpx;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    letter-spacing: 10rpx;
+    color: #b0b0b0;
+}
+
+.navs {
+    display: flex;
+    height: 70rpx;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.nav-items {
+    width: 20%;
+    line-height: 70rpx;
+    text-align: center;
+    letter-spacing: 5rpx;
+    color: #4d4d4d;
+}
+
+.active {
+    color: #ff4e6e;
+    border-bottom: 1px solid #ff4e6e;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #fff;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.closeBtn {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 70rpx;
+    border-radius: 2rpx;
+    border: 1px solid #ededed;
+    line-height: 70rpx;
+    font-size: 35rpx;
+    color: #4d4d4d;
+    letter-spacing: 20rpx;
+}
+
+.list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 170rpx;
+    margin-bottom: 130rpx;
+    background-color: #fff;
+    padding-top: 20rpx;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.lists {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-bottom: 130rpx;
+    background-color: #fff;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.mitem {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 30rpx;
+    position: relative;
+    overflow: hidden;
+}
+
+.mtitle {
+    display: block;
+    float: left;
+    color: #9e9e9e;
+    font-size: 28rpx;
+    width: 70%;
+    height: 85rpx;
+    line-height: 85rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.oksure {
+    float: right;
+    width: 20%;
+    text-align: center;
+    height: 60rpx;
+    line-height: 60rpx;
+    letter-spacing: 10rpx;
+    background-color: #ff4e6e;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-top: 12rpx;
+    margin-right: 10rpx;
+    display: none;
+    z-index: 5;
+}
+
+.okdone {
+    display: block;
+}
+
+.mitem:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0.5rpx;
+    content: '';
+    transform: scaleY(0.5);
+    background-color: #c8c7cc;
+    overflow: hidden;
+}
+
+.seachmusic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+
+.seachmusic .seachs {
+    width: 100%;
+    padding-left: 20rpx;
+    margin-left: 20rpx;
+    background-color: #fff;
+    height: 65rpx;
+    line-height: 65rpx;
+    border-radius: 5rpx;
+    text-align: left;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    color: #b0b0b0;
+}
+
+.seachmusic .seachdone {
+    display: flex;
+}
+
+.cancel {
+    width: 150rpx;
+    height: 60rpx;
+    text-align: center;
+    background-color: #ff4e6e;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    color: #fff;
+    line-height: 60rpx;
+    border-radius: 5rpx;
+}
